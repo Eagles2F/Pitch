@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Switch
+        android:padding="10dp"
+        android:id="@+id/audience_switch"
+        android:textOn="@string/pitch"
+        android:textOff="@string/audience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <SearchView
+        android:id="@+id/topic"
+        android:queryHint="@string/topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ListView
+        android:id="@+id/pitch_audience"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

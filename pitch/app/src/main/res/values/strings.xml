@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">pitch</string>
+    <string name="interest">express interest</string>
+    <string name="chat_pitch">chat pitch</string>
+    <string name="sign_up_linkedin">Sign Up with Linkedin Account</string>
+    <string name="audience">I am an audience</string>
+    <string name="pitch">I want to pitch</string>
+    <string name="action_settings">Settings</string>
+    <string name="topic">Input topic to filter audience</string>
+</resources>
