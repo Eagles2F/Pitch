@@ -6,6 +6,9 @@ Bussiness Canvas for this project:
   
 App screen:
   http://invis.io/MX3NFHNCZ
+  
+Draw IO Design Diagram:
+https://drive.draw.io/#G0Bz9aG93bURIFU2ZqLXZZdW15UHc
 
 # Screens design
 Please check screen_design/ folder.
