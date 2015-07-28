@@ -35,7 +35,6 @@ import io.evanlee.pitch.Utils.AuthUtil;
 // Login Activity
 
 public class LoginActivity extends ActionBarActivity {
-    private Firebase myFirebaseRef;
     private User mUser;
 
     @Override
@@ -45,7 +44,6 @@ public class LoginActivity extends ActionBarActivity {
 
         //set up firebase
         Firebase.setAndroidContext(this);
-        myFirebaseRef = PitchFirebase.rootFirebase;
 
         final Activity thisActivity = this;
 
