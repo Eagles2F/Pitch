@@ -10,6 +10,8 @@ App screen:
 Draw IO Design Diagram:
 https://drive.draw.io/#G0Bz9aG93bURIFU2ZqLXZZdW15UHc
 
+Class Diagram: 
+https://drive.draw.io/#G0Bz9aG93bURIFUVhmbXZ0RGtyaFE
 # Screens design
 Please check screen_design/ folder.
 
