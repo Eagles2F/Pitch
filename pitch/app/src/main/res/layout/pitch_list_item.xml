@@ -6,14 +6,52 @@
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_gravity="center"
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="200dp"
         card_view:cardBackgroundColor="@color/linkedin_blue"
         card_view:cardCornerRadius="4dp">
-        <TextView
-            android:id="@+id/name"
-            android:textColor="@color/white"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/name"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@id/name"
+                android:id="@+id/note"
+                android:text="(Click card to see detailed Profile)"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/headline"
+                android:layout_below="@id/note"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+               android:layout_alignParentBottom="true"
+                android:layout_alignBottom="@id/headline"
+                android:id="@+id/pitch_button_realtime"
+                android:text="Chat Pitch"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/pitch_button_realtime"
+                android:layout_alignBottom="@id/headline"
+                android:id="@+id/pitch_button_offline"
+                android:text="Email Pitch"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

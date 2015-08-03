@@ -42,9 +42,6 @@ public class LoginActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //set up firebase
-        Firebase.setAndroidContext(this);
-
         final Activity thisActivity = this;
 
         if (LISessionManager.getInstance(getApplicationContext()).getSession().isValid()) {
@@ -160,6 +157,6 @@ public class LoginActivity extends ActionBarActivity {
     }
 
     private static Scope buildScope() {
-        return Scope.build(Scope.R_BASICPROFILE, Scope.W_SHARE);
+        return Scope.build(Scope.R_BASICPROFILE,Scope.R_EMAILADDRESS);
     }
 }
