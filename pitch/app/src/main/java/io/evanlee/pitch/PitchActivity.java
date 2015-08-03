@@ -113,6 +113,7 @@ public class PitchActivity extends Activity implements AudienceListAdapter.peopl
     @Override
     public void onRealTimePitchClicked(int position) {
         //start the chat room
+        startActivity(new Intent(this, ChatActivity.class));
     }
 
     @Override

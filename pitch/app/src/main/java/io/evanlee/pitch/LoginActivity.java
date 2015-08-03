@@ -31,6 +31,7 @@ import io.evanlee.pitch.Database.PitchFirebase;
 import io.evanlee.pitch.Model.User;
 import io.evanlee.pitch.Network.LinkedAPI;
 import io.evanlee.pitch.Utils.AuthUtil;
+import io.evanlee.pitch.Utils.Session;
 
 // Login Activity
 
@@ -143,7 +144,7 @@ public class LoginActivity extends ActionBarActivity {
             public void onApiSuccess(ApiResponse apiResponse) {
                 //Success
                 mUser = User.parse(apiResponse.getResponseDataAsJson());
-
+                Session.getInstance().setmCurrentUser(mUser);
                 //check this user has registered or not
                 checkUserRegistered();
             }

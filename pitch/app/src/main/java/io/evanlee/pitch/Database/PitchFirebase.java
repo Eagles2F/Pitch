@@ -8,4 +8,5 @@ import com.firebase.client.Firebase;
 public class PitchFirebase {
     public static final Firebase rootFirebase = new Firebase("https://pitchyou.firebaseio.com/");
     public static final Firebase usersFirebase = new Firebase("https://pitchyou.firebaseio.com/users");
+    public static final Firebase chatFirebase = new Firebase("https://pitchyou.firebaseio.com/chat");
 }

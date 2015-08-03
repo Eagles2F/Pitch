@@ -14,7 +14,7 @@ public class User {
     private String mEmail;
     private String mHeadline;
 
-    public User() {
+    private User() {
 
     }
 
