@@ -5,12 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
 import io.evanlee.pitch.Model.User;
 import io.evanlee.pitch.R;
+import io.evanlee.pitch.Utils.DownloadImageTask;
 
 /**
  * Created by evan on 7/26/15.
@@ -54,6 +56,7 @@ public class AudienceListAdapter extends RecyclerView.Adapter<AudienceListAdapte
         // - replace the contents of the view with that element
         viewHolder.mTextView.setText(audienceList.get(i).getmName());
         viewHolder.mHeadline.setText(audienceList.get(i).getmHeadline());
+        new DownloadImageTask(viewHolder.mProfileImage).execute(audienceList.get(i).getmPictureUrl());
     }
 
     @Override
@@ -68,6 +71,7 @@ public class AudienceListAdapter extends RecyclerView.Adapter<AudienceListAdapte
         // each data item is just a string in this case
         public TextView mTextView;
         public TextView mHeadline;
+        public ImageView mProfileImage;
         public Button mPitchRealTimeButton;
         public Button mPitchOfflineButton;
         public peopleClickListener mListener;
@@ -77,6 +81,7 @@ public class AudienceListAdapter extends RecyclerView.Adapter<AudienceListAdapte
             super(v);
             mTextView = (TextView) v.findViewById(R.id.name);
             mHeadline = (TextView) v.findViewById(R.id.headline);
+            mProfileImage = (ImageView) v.findViewById(R.id.profile_image);
             mPitchRealTimeButton = (Button) v.findViewById(R.id.pitch_button_realtime);
             mPitchOfflineButton = (Button) v.findViewById(R.id.pitch_button_offline);
             mListener = listener;

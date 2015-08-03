@@ -9,6 +9,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.firebase.client.ChildEventListener;
@@ -24,6 +26,7 @@ import java.util.List;
 import io.evanlee.pitch.Adapter.AudienceListAdapter;
 import io.evanlee.pitch.Database.PitchFirebase;
 import io.evanlee.pitch.Model.User;
+import io.evanlee.pitch.Utils.Session;
 
 /**
  * The activity responsible for browsing the pitching audience
@@ -44,6 +47,16 @@ public class PitchActivity extends Activity implements AudienceListAdapter.peopl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pitch);
+        final Switch audienceSwitch = ((Switch) findViewById(R.id.audience_switch));
+        audienceSwitch.setChecked(Session.getInstance().getmCurrentUser().ismPitchable());
+        audienceSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                final User user = Session.getInstance().getmCurrentUser();
+                user.setmPitchable(b);
+                PitchFirebase.usersFirebase.child(user.getmId()).setValue(user);
+            }
+        });
 
         mRecyclerView = (RecyclerView) findViewById(R.id.pitch_audience);
 
@@ -64,7 +77,25 @@ public class PitchActivity extends Activity implements AudienceListAdapter.peopl
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
+                Log.d("evan", "user change");
+                User user = dataSnapshot.getValue(User.class);
+                if (user.ismPitchable()) {
+                    if (!existUser(user)) {
+                        mUserList.add(user);
+                        mAdapter.notifyItemInserted(mAdapter.getItemCount()-1);
+                    }
+                } else {
+                    if (existUser(user)) {
+                        int index =0;
+                        for (User oldUser:mUserList) {
+                            if (oldUser.getmId().equals(user.getmId())) {
+                                index = mUserList.indexOf(oldUser);
+                            }
+                        }
+                        mUserList.remove(index);
+                        mAdapter.notifyItemRemoved(index);
+                    }
+                }
             }
 
             @Override
@@ -129,5 +160,14 @@ public class PitchActivity extends Activity implements AudienceListAdapter.peopl
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(PitchActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private boolean existUser(User user) {
+        for (User oldUser:mUserList) {
+            if (oldUser.getmId().equals(user.getmId())) {
+                return true;
+            }
+        }
+        return false;
     }
 }

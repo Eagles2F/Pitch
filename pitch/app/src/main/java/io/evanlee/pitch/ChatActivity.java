@@ -1,9 +1,8 @@
 package io.evanlee.pitch;
 
-import android.app.ListActivity;
-import android.content.SharedPreferences;
 import android.database.DataSetObserver;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -17,8 +16,6 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
-import java.util.Random;
-
 import io.evanlee.pitch.Adapter.ChatListAdapter;
 import io.evanlee.pitch.Database.PitchFirebase;
 import io.evanlee.pitch.Model.Chat;
@@ -27,12 +24,13 @@ import io.evanlee.pitch.Utils.Session;
 /**
  * Created by evan on 8/2/15.
  */
-public class ChatActivity extends ListActivity {
+public class ChatActivity extends ActionBarActivity {
     private String mUsername;
     private Firebase mFirebaseRef;
     private ValueEventListener mConnectedListener;
     private ChatListAdapter mChatListAdapter;
 
+    private ListView mListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +39,9 @@ public class ChatActivity extends ListActivity {
         // Make sure we have a mUsername
         setupUsername();
         setTitle("Chatting as " + mUsername);
+
+        mListView = (ListView) findViewById(R.id.list_chat);
+
         // Setup our Firebase mFirebaseRef
         mFirebaseRef = PitchFirebase.chatFirebase;
 
@@ -69,15 +70,14 @@ public class ChatActivity extends ListActivity {
     public void onStart() {
         super.onStart();
         // Setup our view and list adapter. Ensure it scrolls to the bottom as data changes
-        final ListView listView = getListView();
         // Tell our list adapter that we only want 50 messages at a time
         mChatListAdapter = new ChatListAdapter(mFirebaseRef.limit(50), this, R.layout.chat_message, mUsername);
-        listView.setAdapter(mChatListAdapter);
+        mListView.setAdapter(mChatListAdapter);
         mChatListAdapter.registerDataSetObserver(new DataSetObserver() {
             @Override
             public void onChanged() {
                 super.onChanged();
-                listView.setSelection(mChatListAdapter.getCount() - 1);
+                mListView.setSelection(mChatListAdapter.getCount() - 1);
             }
         });
 

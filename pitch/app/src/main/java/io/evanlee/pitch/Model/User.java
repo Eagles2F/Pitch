@@ -13,16 +13,20 @@ public class User {
     private String mName;
     private String mEmail;
     private String mHeadline;
+    private String mPictureUrl;
+    private boolean mPitchable;
 
     private User() {
 
     }
 
-    public User(String id, String name, String email, String headline) {
+    public User(String id, String name, String email, String headline, String url) {
         mId = id;
         mName = name;
         mEmail = email;
         mHeadline = headline;
+        mPictureUrl = url;
+        mPitchable = true;
     }
 
     public String getmName() {
@@ -58,16 +62,32 @@ public class User {
         this.mHeadline = mHeadline;
     }
 
+    public String getmPictureUrl() {
+        return mPictureUrl;
+    }
+
+    public void setmPictureUrl(String mPictureUrl) {
+        this.mPictureUrl = mPictureUrl;
+    }
+
+    public boolean ismPitchable() {
+        return mPitchable;
+    }
+
+    public void setmPitchable(boolean mPitchable) {
+        this.mPitchable = mPitchable;
+    }
+
     public static User parse(JSONObject jsonObject) {
         try {
             return new User(jsonObject.getString(LinkedAPI.JSON_ID),
                     jsonObject.getString(LinkedAPI.JSON_NAME),
                     jsonObject.getString(LinkedAPI.JSON_EMAIL),
-                    jsonObject.getString(LinkedAPI.JSON_HEADLINE));
+                    jsonObject.getString(LinkedAPI.JSON_HEADLINE),
+                    jsonObject.getString(LinkedAPI.JSON_PICTUREURL));
         } catch (JSONException e) {
             e.printStackTrace();
         }
         return null;
     }
-
 }
