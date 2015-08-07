@@ -1,0 +1,25 @@
+@CHARSET "ISO-8859-1";
+/*Reset for printing*/
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.4em;
+	word-spacing: 1px;
+	letter-spacing: 0.2px;
+	font: 13px Arial, Arial, san-serif;
+	color: #000;
+}
+
+/*Remove some unwanted to print parts*/
+#navigation, #canvas-function-bar, #head, #foot, #brain_storming_section, #insert_form_block, #edit_form_block, #edit_canvas_setting_block, #copy_canvas_block, #copy_canvas_block_result
+{
+	display: none;
+}
+
+.edit_canvas_setting, .insert_note, .jqm-window, .header {
+	display: none;
+}
+
+#footer-container, #page_heading_wrapper, #canvas_footer, #main_table hr {
+	display: none;
+}

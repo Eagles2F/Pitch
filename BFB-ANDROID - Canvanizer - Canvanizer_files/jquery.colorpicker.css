@@ -1,0 +1,73 @@
+.color-picker-popup { 
+	background: white;
+	border: 1px solid #B9B9B9;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	display: none;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 2px;
+	z-index: 2002;
+}
+ul.color-picker {
+	list-style-type:none;
+	list-style:none;
+	margin:0;
+	padding: 0;
+}
+ul.color-picker li{
+	margin:0px;
+}
+ul.color-picker li.grid{
+	float:left;
+	padding:2px;
+}
+
+ul.color-picker li.grid a{
+	
+}
+
+ul.color-picker li a{
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border:1px solid #fff;
+	color: #EEE;
+	cursor: pointer;
+	font-size: 14px;
+	margin: 0;
+	position: relative;
+	display:block;
+        width: 20px;
+        height: 20px;        
+}
+ul.color-picker li a:hover{
+    border: 1px solid #ccc;
+}
+ul.color-picker li a.selected{
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALdJREFUeNpi/P//PwNFAGQAGZgTiKuBWJoczWZAfO8/BLCRqjkciL9BNX8Ge58EzU5A/PM/AvwBYmZiNesC8Yf/mMCVGM3SQPwKTeMTIE5DDwMJIJ4MxJdAEkji29E0r4bGAgMsDISAeAJS4IBABVRBAprmdnQXwqJlEZrCz1B/v0USy8fmRWSOMdT5MPAWi4vwGgBLYXMIORufATBcBNUMCkBmcgwA4SggFiUUzYyU5kaKDQAIMAAF6a7dZpRIDgAAAABJRU5ErkJggg==") no-repeat scroll center center #FF0000;        
+        border: 1px dashed darkblue;
+}
+ul.color-picker li a.red-label{
+	background-color:red;
+}
+ul.color-picker li a.blue-label{
+	background-color:blue;
+}
+ul.color-picker li a.green-label{
+	background-color:green;
+}
+ul.color-picker li a.yellow-label{
+	background-color:yellow;
+}
+
+.notes-picker ul.color-picker li.grid{
+	padding:1px;
+}
+.notes-picker .color-picker-popup  {
+	border-top:none;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 4px 4px 5px #999;
+        border: 0;
+}

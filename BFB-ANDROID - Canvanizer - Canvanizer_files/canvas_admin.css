@@ -1,0 +1,136 @@
+@CHARSET "ISO-8859-1";
+.color-box{
+	display:table-cell;
+}
+
+.jqm-window{
+
+}
+
+.jqm-window h6{
+	border-bottom: medium none;
+    margin: 0;
+    padding-bottom: 10px;
+}
+.jqm-window textarea{
+	width:280px;
+	height:100px;
+}
+.jqm-window-header{
+	margin-bottom:20px;
+}
+
+.jqm-window-header h2{
+	font-size: 2.5em;
+	margin: 0;
+	padding: 5px 0;
+}
+
+.jqm-close{
+	float:right;
+}
+
+input.txt_color{
+	color:#000;
+}
+
+span.note-actions{
+	float:right;
+}
+span.note-actions:hover {
+	display: block;
+}
+.hide{
+	display:none;
+}
+
+#main_table {
+
+}
+
+#main_table td h6:first-child{
+	color:#434A48;
+}
+
+#main_table tr td{
+	background-color:transparent;
+	border:2px  dotted #666;
+        overflow: hidden;
+}
+
+#main_table tr td.border-right-none {
+    border-right: none;
+}
+#main_table tr td.border-bottom-none {
+    border-bottom: none;
+}
+#main_table tr td.border-left-none {
+    border-left: none;
+}
+#main_table tr td.border-top-none {
+    border-top: none;
+}
+
+#main_table thead td {text-align: center;}
+
+.drop_notes {
+
+          text-wrap :unrestricted;
+          margin-bottom: 12px;
+
+  -webkit-border-radius: 2px 2px 2px 2px;
+	 -moz-border-radius: 2px 2px 2px 2px;
+		  border-radius: 2px 2px 2px 2px;
+
+     -webkit-box-shadow:  3px 3px 2px #999999;
+	    -moz-box-shadow:  3px 3px 2px #999999;
+		     box-shadow:  3px 3px 2px #999999;
+
+}
+
+.drop_notes .border-yes, .drop_notes .note-headline{
+        max-width: 200px;
+        word-wrap:normal;
+        word-break:normal;
+}
+
+.large-width .drop_notes .border-yes{
+        max-width: none;
+        word-wrap:normal;
+        word-break:normal;
+}
+
+/* Brainstorming section */
+#brain_storming_section {
+	width: 1000px;
+}
+#brain_storming_section .drop_notes, .normal_dropnotes_section .drop_notes {
+	width: 215px;
+	float:left;
+	margin-right: 20px;
+}
+.fix_width_section .drop_notes {
+	max-width: 215px;
+	width: 100%;
+	/* width:215px; */
+	float:left;
+	margin-right: 20px;
+}
+
+.large-width { overflow:auto;}
+
+.semi-background{
+	background-color: rgba(0, 0, 0, 0.09)!important;
+}
+
+.canvas_problem_definition .drop_notes{
+	width:195px;
+}
+
+.people-shadow-canvas .min-height200 .drop_container{
+	min-height: 200px;
+}
+
+.people-shadow-canvas .equal-height .drop_container{
+	min-height: 120px;
+}

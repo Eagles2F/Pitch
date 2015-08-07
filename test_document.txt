@@ -1,0 +1,7 @@
+1. test the login functionality: open app and login with your linkedin account.
+2. test the pitch list: after you login , you could see the list, click those cards in the list and you could test the profile part.
+3. test the chat functionality: click chat button and enter the chat room. say whatever you want.
+4. test the email functionality: click email button.
+5. test apk on different devices
+6. ask more friends to join the network
+

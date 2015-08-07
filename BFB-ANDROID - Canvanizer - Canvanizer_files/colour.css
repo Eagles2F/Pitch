@@ -1,0 +1,111 @@
+small {
+	color:#888
+}
+
+th,#navigation,.active,input[type=submit],.pagination a:hover,.date td a:hover {
+	background:#434A48;
+	color:#fff
+}
+
+select, textarea, input, td, #content, #foot {
+	
+}
+tr {
+	background-position:0 -18px;
+}
+#content {
+	background-position:0 1px;
+}
+
+.active, th, #head, #navigation a, input[type=submit] {
+	color:#fff;
+}
+
+input, select, textarea {
+	
+}
+
+h1,h2,h3,h4,h5,h6 {
+	border-color:#333;
+}
+
+a {
+	color:#313230;
+}
+a.edit {
+	background-image:url(../images/edit.png)
+}
+a.delete {
+	background-image:url(../images/trash.png)
+}
+
+#head {
+	background:#313230
+}
+
+#navigation a:hover {
+	background:#383E3C
+}
+#navigation .active {
+	background:#687370
+}
+
+.box,.box > .utils a {
+	background:#fff;
+	border-color:#eee
+}
+.box > h2 {
+	background:url(../images/box-h2.png) repeat-x bottom center #fff
+}
+
+.error,.success,.info,.error a,.success a,.info a {
+	color:#fff
+}
+.error {
+	background:#901830
+}
+.success {
+	background:#C2EFC2
+}
+
+/*
+.ui-state-highlight {
+	background:#eee;
+	font-size:13px;
+	margin:0 0 11px 0;
+	position:relative;
+}
+*/
+
+/*Manas*/
+
+/* #main_table tr td { background: #666; color: #FFF; border:3px solid #FFF; } */
+.drop_container { padding: 10px 0 40px 0; overflow-y: auto }
+.drop_notes{ background:#FF0; margin-bottom: 5px; padding:5px; color:#333; }
+.hid { display: none; }
+
+#status_message {
+	position:fixed;
+	background:#FFF6BF;
+	color:#514721;
+	top:0;
+	left:50%;
+	padding:4px 10px;
+	margin-bottom:1em;
+	border:2px solid #FFD324;
+	border-top:none;
+	border-radius: 0px 0px 7px 7px;
+	z-index:10002;
+	width:80px;
+	margin-left:-50px;
+	font-size: 0.8em;
+	text-align:center; 
+}
+
+.shadow {
+	border-radius: 2px 2px 2px 2px;
+    box-shadow: 3px 3px 2px #999999;
+    margin-bottom: 12px;
+}
+
+.fix_width_section .drop_notes{ width:90%;}
