@@ -1,5 +1,5 @@
-# bfb_android
-This is the android app for bridgeforbillions.org
+# Pitch
+This is the android app for pitching to another guy in this network
 
 Bussiness Canvas for this project: 
   https://canvanizer.com/canvas/92FcXHRhGds
