@@ -4,16 +4,29 @@ This is the android app for pitching to another guy in this network
 Bussiness Canvas for this project: 
   https://canvanizer.com/canvas/92FcXHRhGds
   
-App screen:
-  http://invis.io/MX3NFHNCZ
-  
 Draw IO Design Diagram:
 https://drive.draw.io/#G0Bz9aG93bURIFU2ZqLXZZdW15UHc
 
 Class Diagram: 
 https://drive.draw.io/#G0Bz9aG93bURIFUVhmbXZ0RGtyaFE
+
 # Screens design
-Please check screen_design/ folder.
+The Main page of App.
+User have two choice: either login as pitcher, who is going to present a pitch; or as pitchee, who is going to listen to a pitch.
+
+![alt tag](https://raw.githubusercontent.com/Eagles2F/Pitch/master/screen_design/wireframe/main.png)
+
+Create page for pitchers. They can create a pitch by providing date, time and subject.
+
+![alt tag](https://github.com/Eagles2F/Pitch/blob/master/screen_design/wireframe/create.png)
+
+As a pitchee, they can see a list of pitches that they are registed to. On the right side of screen is some message center.
+
+![alt tag](https://raw.githubusercontent.com/Eagles2F/Pitch/master/screen_design/wireframe/pitchee.png)
+
+The streaming page. Pitchees can check streaming live pitches from Pitcher.
+
+![alt tag](https://raw.githubusercontent.com/Eagles2F/Pitch/master/screen_design/wireframe/vedio.png)
 
 # Presentation Tier
 Intent 1 : Login Activity -> Pitch Activity
