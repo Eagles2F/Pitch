@@ -10,11 +10,15 @@ https://drive.draw.io/#G0Bz9aG93bURIFU2ZqLXZZdW15UHc
 Class Diagram: 
 https://drive.draw.io/#G0Bz9aG93bURIFUVhmbXZ0RGtyaFE
 
-Design Diagram (Use case, page flow diagram):
-https://drive.google.com/a/andrew.cmu.edu/file/d/0BzYMuKkd1_XOblZXaEREODNUZ0E/view?usp=sharing
-
 User Story:
 https://docs.google.com/a/andrew.cmu.edu/document/d/1KKN5wXMP6vkR0AJBdAZ1fySqtc9WLRPysOCS6RpolF8/edit?usp=sharing
+
+# Use case diagram
+![alt tag](https://raw.githubusercontent.com/Eagles2F/Pitch/master/screen_design/use%20case%20diagram.png)
+
+# Page flow diagram
+![alt tag](https://raw.githubusercontent.com/Eagles2F/Pitch/master/screen_design/sys%20diagram%201.png)
+![alt tag](https://raw.githubusercontent.com/Eagles2F/Pitch/master/screen_design/sys%20diagram%202.png)
 
 # Screens design
 The Main page of App.
