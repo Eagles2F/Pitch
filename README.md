@@ -10,6 +10,12 @@ https://drive.draw.io/#G0Bz9aG93bURIFU2ZqLXZZdW15UHc
 Class Diagram: 
 https://drive.draw.io/#G0Bz9aG93bURIFUVhmbXZ0RGtyaFE
 
+Design Diagram (Use case, page flow diagram):
+https://drive.google.com/a/andrew.cmu.edu/file/d/0BzYMuKkd1_XOblZXaEREODNUZ0E/view?usp=sharing
+
+User Story:
+https://docs.google.com/a/andrew.cmu.edu/document/d/1KKN5wXMP6vkR0AJBdAZ1fySqtc9WLRPysOCS6RpolF8/edit?usp=sharing
+
 # Screens design
 The Main page of App.
 User have two choice: either login as pitcher, who is going to present a pitch; or as pitchee, who is going to listen to a pitch.
