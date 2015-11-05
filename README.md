@@ -2,7 +2,7 @@
 This is the android app for pitching to another guy in this network
 
 Bussiness Canvas for this project: 
-  https://canvanizer.com/canvas/92FcXHRhGds
+  https://canvanizer.com/canvas/7GxafzgTJug
   
 Draw IO Design Diagram:
 https://drive.draw.io/#G0Bz9aG93bURIFU2ZqLXZZdW15UHc
